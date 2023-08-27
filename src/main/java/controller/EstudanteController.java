@@ -57,6 +57,47 @@ public class EstudanteController {
 
     public void atualizarEstudante(Estudante estudante) {
         estudanteDAO.atualizar(estudante);
+        System.out.println("Informe os novos dados do estudante:");
+
+  
+  System.out.print("Nome: ");
+  
+  String nome = scanner.nextLine();
+
+  
+  System.out.print("Apelido: ");
+  
+  String apelido = scanner.nextLine();
+
+ 
+   System.out.print("Contacto: ");
+  
+  String contacto = scanner.nextLine();
+
+  
+  System.out.print("Endereco: ");
+    
+String endereco = scanner.nextLine();
+
+    
+
+    estudante.setNome(nome);
+  
+  estudante.setApelido(apelido);
+  
+  estudante.setContacto(contacto);
+  
+  estudante.setEndereco(endereco);
+
+   
+ 
+    estudanteDAO.atualizar(estudante);
+
+  
+  System.out.println("Estudante atualizado com sucesso!");
+     
+
+
     }
 
     public void removerEstudante(int nrMatricula) {
